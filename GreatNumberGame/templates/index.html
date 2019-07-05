@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>GreatNumbaGamessss</title>
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+      <meta charset="UTF-8">
+   </head>
+
+   <body>
+    <div class="container">
+        <div class="header">
+                <h3>GreatNumbaGamessss</h3>
+                <button>←</button>
+                <button>→</button>
+                <button>x</button>
+                <button>ƒ</button>
+                <input type="text" placeholder="httlp://localhost:5000/play">
+                <input type="text" placeholder="♀">
+        </div><!--header-->
+        <div class="chassis">
+            <h2>Welcomes to the Greaat Number Game!!!</h2> <br>
+            <h2>Care to play a game?</h2>
+            <h4>I am thinking of a number between 1 and 100</h4>
+            <br>
+            <h4>Take a guess!</h4>
+            <br>
+            <div class="boxes" style="background-color: {{color}}">
+                <h1>{{ var }}</h1>
+                <h2>{{win}}</h2>
+            </div>
+            <br>
+            <br>
+            <form action="/results" method="POST">
+                <input type="number" name="guess" value="0" class="guess"><br><br>
+                <input type="submit" name="submit" class="guess">                
+            </form>  
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>        
+            <form action="/"> <input type="submit" value='{{restart}}'></form>
+
+        </div><!--chassis-->
+    </div><!--container-->
+
+   </body>
+</html>
